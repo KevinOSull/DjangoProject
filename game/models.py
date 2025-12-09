@@ -14,6 +14,8 @@ class Game(models.Model):
     current_status = models.IntegerField(choices=STATUS_CHOICES,default=4)
     platform_of_choice = models.IntegerField(choices=PLATFORM_OF_CHOICE,default=8)
     hours_played = models.IntegerField(choices=HOURS_PLAYED_CHOICES,default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_on = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = ["-release_year","name"]

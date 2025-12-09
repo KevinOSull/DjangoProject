@@ -6,5 +6,6 @@ from .models import Game, Comment
 class GameListView(generic.ListView):
     #model = Game
     queryset = Game.objects.all()
-    template_name = "game_list.html"
+    template_name = "game/index.html"
+    paginate_by = 6
 

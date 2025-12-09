@@ -1,0 +1,142 @@
+[
+    {
+        "model": "game.game",
+        "pk": null,
+        "fields": {
+            "user": 1,
+            "name": "Atomfall",
+            "genre": 2,
+            "release_year": 2023,
+            "game_developer": "Rebellion",
+            "current_status": 4,
+            "platform_of_choice": 8,
+            "hours_played": 10
+        }
+    },
+    {
+        "model": "game.game",
+        "pk": null,
+        "fields": {
+            "user": 1,
+            "name": "Hogwarts Legacy",
+            "genre": 3,
+            "release_year": 2023,
+            "game_developer": "Avalanche Software",
+            "current_status": 2,
+            "platform_of_choice": 5,
+            "hours_played": 25
+        }
+    },
+    {
+        "model": "game.game",
+        "pk": null,
+        "fields": {
+            "user": 1,
+            "name": "Resident Evil 4 Remake",
+            "genre": 1,
+            "release_year": 2023,
+            "game_developer": "Capcom",
+            "current_status": 3,
+            "platform_of_choice": 6,
+            "hours_played": 15
+        }
+    },
+    {
+        "model": "game.game",
+        "pk": null,
+        "fields": {
+            "user": 1,
+            "name": "The Legend of Zelda: Tears of the Kingdom",
+            "genre": 3,
+            "release_year": 2023,
+            "game_developer": "Nintendo",
+            "current_status": 1,
+            "platform_of_choice": 7,
+            "hours_played": 40
+        }
+    },
+    {
+        "model": "game.game",
+        "pk": null,
+        "fields": {
+            "user": 1,
+            "name": "Elden Ring",
+            "genre": 4,
+            "release_year": 2022,
+            "game_developer": "FromSoftware",
+            "current_status": 4,
+            "platform_of_choice": 5,
+            "hours_played": 100
+        }
+    },
+    {
+        "model": "game.game",
+        "pk": null,
+        "fields": {
+            "user": 1,
+            "name": "God of War: Ragnarok",
+            "genre": 2,
+            "release_year": 2022,
+            "game_developer": "Santa Monica Studio",
+            "current_status": 2,
+            "platform_of_choice": 6,
+            "hours_played": 30
+        }
+    },
+    {
+        "model": "game.game",
+        "pk": null,
+        "fields": {
+            "user": 1,
+            "name": "Hades",
+            "genre": 4,
+            "release_year": 2020,
+            "game_developer": "Supergiant Games",
+            "current_status": 4,
+            "platform_of_choice": 5,
+            "hours_played": 80
+        }
+    },
+    {
+        "model": "game.game",
+        "pk": null,
+        "fields": {
+            "user": 1,
+            "name": "Cyberpunk 2077",
+            "genre": 1,
+            "release_year": 2020,
+            "game_developer": "CD Projekt Red",
+            "current_status": 3,
+            "platform_of_choice": 8,
+            "hours_played": 50
+        }
+    },
+    {
+        "model": "game.game",
+        "pk": null,
+        "fields": {
+            "user": 1,
+            "name": "The Witcher 3: Wild Hunt",
+            "genre": 4,
+            "release_year": 2015,
+            "game_developer": "CD Projekt Red",
+            "current_status": 4,
+            "platform_of_choice": 5,
+            "hours_played": 120
+        }
+    },
+    {
+        "model": "game.game",
+        "pk": null,
+        "fields": {
+            "user": 1,
+            "name": "Red Dead Redemption 2",
+            "genre": 2,
+            "release_year": 2018,
+            "game_developer": "Rockstar Games",
+            "current_status": 4,
+            "platform_of_choice": 6,
+            "hours_played": 90
+        }
+    }
+]
