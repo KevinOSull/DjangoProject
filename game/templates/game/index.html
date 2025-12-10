@@ -2,28 +2,28 @@
 
 <div class="container-fluid">
     <div class="row">
-        <!-- Game Cards Column -->
+        
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for game in game_list %}
                 <div class="col-md-4">
                     <div class="card mb-4">
                         <div class="card-body">
-                            <!-- Game Author -->
+                            
                             <div class="mb-2">
                                 <p class="author">
                                     Added by: {{ game.user.username }}
                                 </p>
                             </div>
 
-                            <!-- Game Title -->
-                            <a href="{#}" class="game-link">
+                            
+                            <a href="{% url 'game_detail' game.slug %}" class="post-link">
                                 <h2 class="card-title">{{ game.name }}</h2>
                             </a>
 
                             <hr />
 
-                            <!-- Game Info -->
+                            
                             <p class="card-text text-muted">
                                 <strong>Genre:</strong> {{
                                 game.get_genre_display }}<br />

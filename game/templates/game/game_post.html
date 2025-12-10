@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="masthead">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-md-6 masthead-text">
+                <h1 class="post-title">{{ game.name }}</h1>
+                <p class="post-subtitle">Added by: {{ game.user.username }}</p>
+            </div>
+
+            <div class="d-none d-md-block col-md-6 masthead-image">
+                {% if game.image %}
+                    <img src="{{ game.image.url }}" class="scale" alt="{{ game.name }}">
+                {% else %}
+                    <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col card mb-4 mt-3 left top">
+            <div class="card-body">
+
+                <p class="card-text">
+                    <strong>Genre:</strong> {{ game.get_genre_display }}<br>
+                    <strong>Platform:</strong> {{ game.get_platform_of_choice_display }}<br>
+                    <strong>Status:</strong> {{ game.get_current_status_display }}<br>
+                    <strong>Release Year:</strong> {{ game.release_year|default:"N/A" }}<br>
+                    <strong>Hours Played:</strong> {{ game.hours_played }}<br>
+                </p>
+
+                {% if game.notes %}
+                <hr>
+                <h5>Your Notes:</h5>
+                <p>{{ game.notes }}</p>
+                {% endif %}
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
+

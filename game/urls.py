@@ -3,4 +3,5 @@ from django.urls import path
 
 urlpatterns = [
     path('', views.GameListView.as_view(), name='home'),
+    path('<slug:slug>/', views.GameDetailView.as_view(), name='game_detail'),
 ]
