@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.utils.text import slugify
 STATUS_CHOICES = ((0,"COMPLETED"),(1,"CURRENTLY_PLAYING"),(2,"ON_HOLD"),(3,"DROPPED"),(4,"PLAN_TO_PLAY"),(5,"NOT_PLAYED_YET"))
 PLATFORM_OF_CHOICE = ((0,"PC"),(1,"PLAYSTATION 5"),(2,"PLAYSTATION 4"),(3,"XBOX SERIES X"),(4,"XBOX ONE"),(5, "NINTENDO SWITCH"),(6,"NINTEDO SWITCH 2"),(7,"PLAYSTATION VITA"),(8,"OTHER"))
 GAME_GENRE = ((0,"ANY"),(1,"ACTION"),(2,"ACTION ADVENTURE"),(3,"JRPG"),(4,"RPG"),(5,"SIMULATION"),(6,"STRATEGY"),(7,"SPORTS"))
@@ -16,6 +17,12 @@ class Game(models.Model):
     hours_played = models.IntegerField(choices=HOURS_PLAYED_CHOICES,default=0)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
+    slug = models.SlugField(blank=True,null=True)
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.name)
+        super().save(*args, **kwargs)
 
     class Meta:
         ordering = ["-release_year","name"]

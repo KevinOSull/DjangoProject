@@ -19,7 +19,8 @@ from django.urls import path,include
 #from game.views import my_game
 
 urlpatterns = [
-    path("", include("game.urls")),
     path('admin/', admin.site.urls),
+    path("", include("game.urls")),
+    
     #path('mygame/',my_game, name='my_game'),
 ]
