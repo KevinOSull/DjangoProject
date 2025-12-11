@@ -1,69 +1,40 @@
-{% extends "base.html" %} {% block content %}
+{% extends 'base.html' %}
 
-<div class="container-fluid">
-    <div class="row">
-        
-        <div class="col-12 mt-3 left">
-            <div class="row">
-                {% for game in game_list %}
-                <div class="col-md-4">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            
-                            <div class="mb-2">
-                                <p class="author">
-                                    Added by: {{ game.user.username }}
-                                </p>
-                            </div>
+{% block content %}
+<h1>Your Games</h1>
+<a href="{% url 'add_game' %}" class="btn btn-primary mb-3">Add New Game</a>
 
-                            
-                            <a href="{% url 'game_detail' game.slug %}" class="post-link">
-                                <h2 class="card-title">{{ game.name }}</h2>
-                            </a>
+{% if object_list %}
+    <ul class="list-group">
+    {% for game in object_list %}
+        <li class="list-group-item">
+            <a href="{% url 'game_detail' game.slug %}">{{ game.name }}</a>
+        </li>
+    {% endfor %}
+    </ul>
 
-                            <hr />
-
-                            
-                           
-                        </div>
-                    </div>
-                </div>
-
-                {% if forloop.counter|divisibleby:3 %}
-            </div>
-            <div class="row">{% endif %} {% endfor %}</div>
-        </div>
-    </div>
-
-    <!-- Pagination -->
     {% if is_paginated %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if page_obj.has_previous %}
-            <li class="page-item">
-                <a
-                    href="?page={{ page_obj.previous_page_number }}"
-                    class="page-link"
-                    >&laquo; Prev</a
-                >
-            </li>
-            {% endif %} {% if page_obj.has_next %}
-            <li class="page-item">
-                <a
-                    href="?page={{ page_obj.next_page_number }}"
-                    class="page-link"
-                    >Next &raquo;</a
-                >
-            </li>
-            {% endif %}
-        </ul>
-    </nav>
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                {% if page_obj.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+                    </li>
+                {% endif %}
+                <li class="page-item disabled">
+                    <span class="page-link">Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}</span>
+                </li>
+                {% if page_obj.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
     {% endif %}
-</div>
 
-{% endblock %} 
+{% else %}
+    <p>You have not added any games yet.</p>
+{% endif %}
+{% endblock %}
 
-
-{% block copyright %} 
-Copyright Kevin O'Sullivan 2025 
-{% endblock%}
