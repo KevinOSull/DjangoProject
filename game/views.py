@@ -1,13 +1,15 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.views import generic
 from django.contrib import messages
+from django.http import HttpResponseRedirect
 from .models import Game, Comment
 from .forms import CommentForm, GameForm
-
+from django.contrib.auth.decorators import login_required
 
 class GameListView(generic.ListView):
     template_name = "game/index.html"
     paginate_by = 6
+    login_url = '/accounts/login/'
 
     def get_queryset(self):
         user = self.request.user
@@ -43,7 +45,7 @@ def game_detail(request, slug):
     })
 
 
-
+@login_required(login_url='/accounts/login/')
 def add_game(request):
     if request.method == "POST":
         form = GameForm(request.POST)
@@ -58,4 +60,33 @@ def add_game(request):
 
     return render(request, 'game/add_game.html', {'form': form})
 
+def comment_edit(request, slug, comment_id):
+    comment = get_object_or_404(Comment, pk=comment_id)
+    game = get_object_or_404(Game, slug=slug)
 
+    if comment.user != request.user:
+        messages.error(request, "You are not allowed to edit this comment.")
+        return redirect('game_detail', slug=slug)
+
+    if request.method == "POST":
+        form = CommentForm(request.POST, instance=comment)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Comment updated successfully!")
+            return redirect('game_detail', slug=slug)
+    else:
+        form = CommentForm(instance=comment)
+
+    return render(request, 'game/edit_comment.html', {'form': form, 'game': game})
+
+def comment_delete(request, slug, comment_id):
+  
+    game = get_object_or_404(Game, slug=slug)
+    comment = get_object_or_404(Comment, pk=comment_id, game=game)
+
+    if comment.user == request.user:
+        comment.delete()
+        messages.success(request, "Comment deleted!")
+    
+
+    return redirect('game_detail', slug=slug)

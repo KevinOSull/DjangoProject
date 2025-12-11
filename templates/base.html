@@ -139,6 +139,8 @@
             crossorigin="anonymous"
         ></script>
 
-        {% block extras %} {% endblock %}
+        {% block extras %} 
+        <script src="{% static 'js/note.js' %}"></script>
+        {% endblock %}
     </body>
 </html>

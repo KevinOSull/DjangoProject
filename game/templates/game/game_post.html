@@ -4,13 +4,13 @@
 
 {% block content %}
 
-<!-- Masthead -->
+
 <div class="masthead mb-4">
     <h1>{{ game.name }}</h1>
     <p>Added by: {{ game.user.username }}</p>
 </div>
 
-<!-- Game Info -->
+
 <div class="card mb-4">
     <div class="card-body">
         <p>
@@ -23,27 +23,46 @@
     </div>
 </div>
 
-<!-- Add Note Form -->
+
 <div class="card mb-4">
     <div class="card-body">
         <h4>Add a Note</h4>
-        <form method="POST">
+        <form method="POST" id="commentForm">
             {% csrf_token %}
             {{ comment_form|crispy }}
-            <button type="submit" class="btn btn-primary">Add Note</button>
+            <button id="submitButton"type="submit" class="btn btn-primary">Add Note</button>
         </form>
     </div>
 </div>
 
-<!-- Display Notes -->
+
 <div class="card">
     <div class="card-body">
         <h4>Your Notes ({{ comment_count }})</h4>
+
         {% if comments %}
             {% for comment in comments %}
                 <div class="mb-2 p-2 border rounded">
+
                     <small class="text-muted">{{ comment.created_at }}</small>
-                    <p>{{ comment.body }}</p>
+                    <p id="comment{{ comment.id }}">{{ comment.body }}</p>
+
+                    
+                    {% if user.is_authenticated and comment.user == user %}
+                        <button class="btn btn-sm btn-warning btn-edit"
+                                data-comment-id="{{ comment.id }}"
+                                data-slug="{{ game.slug }}">
+                            Edit
+                        </button>
+
+                        <!-- Delete Button -->
+                        <button class="btn btn-sm btn-danger btn-delete"
+                                data-comment-id="{{ comment.id }}"
+                                data-slug="{{ game.slug }}">
+                            Delete
+                        </button>
+                    {% endif %}
+
                 </div>
             {% endfor %}
         {% else %}
@@ -52,4 +71,30 @@
     </div>
 </div>
 
+
+
+<div class="modal fade" id="deleteModal" tabindex="-1"  
+     aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Delete comment?</h5>
+        <button type="button" class="btn-close"
+          data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete your comment? This action cannot be undone.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary"
+          data-bs-dismiss="modal">Close</button>
+        <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+{% block extras %}
+<script src="{% static 'js/note.js' %}"></script>
 {% endblock %}
