@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-4 text-center">
+      <img src="{% static 'images/me1.jpg' %}" width="75%" />
+    </div>
+
+    <div class="col-8">
+      <h2>{{ about.titleField }}</h2>
+      {{ about.contentField|safe }}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col text-end">
+      <p><em>Updated on: {{ about.updated_on }}</em></p>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

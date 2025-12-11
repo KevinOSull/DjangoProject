@@ -14,6 +14,7 @@ from django.contrib import admin
 from django.utils.text import slugify
 from .models import Game, Comment  
 
+
 @admin.action(description='Generate slugs for selected games')
 def generate_slugs(modeladmin, request, queryset):
     for game in queryset:
