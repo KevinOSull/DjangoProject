@@ -174,3 +174,6 @@ I would like to add a number of additions to the site in the future and these ar
 [Back to Table of Contents](#table-of-contents)
 
 - Site unfortunately is not responsive for mobiles, as I ran into time constraints.
+
+# Credit
+[Back to Table of Contents](#table-of-contents)
