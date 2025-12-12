@@ -22,7 +22,8 @@
 # User Stories
 [Back to Table of Contents](#table-of-contents)
 # Wireframes
-![Sign in screen wireframe](static/images/wireframeImages/Signinscreenshot.png "Sign in")
+Login in screen
+![Sign in screen wireframe](static/images/wireframeImages/Signinscreenshot.png)
 [Back to Table of Contents](#table-of-contents)
 # Deployment
 [Back to Table of Contents](#table-of-contents)
