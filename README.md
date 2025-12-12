@@ -43,6 +43,9 @@ Home About Register and Login, by clicking them you can navigate the different p
 - As a user, I want a simple and clean interface so that I can navigate the app easily.
 - As a user, I want confirmation modals when deleting notes so that I don’t accidentally lose important information.
 
+I used the github projects Kanban board to keep track of tasks.This helped me a great deal as I could track what I need to and view what I had left to do.
+
+![Kanban Board](static/images/htmlValidation/kattanboard.png)
 
 # Wireframes
 Login in screen
