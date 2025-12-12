@@ -11,6 +11,7 @@
 - [Testing](#testing)
 - [Future Additions](#future-additions)
 - [Known Issues](#known-issues)
+- [Credits](#credits)
 
 
 # Overview
@@ -91,6 +92,38 @@ I used AI to help with debugging issues and errors, it was really helpful for th
 # Testing
 [Back to Table of Contents](#table-of-contents)
 
+Testing and QA
+
+
+| Page / Section        | Feature                          | Expected Behavior                                                    | Status |
+|-----------------------|----------------------------------|---------------------------------------------------------------------|--------|
+| Login Page            | Login Form                        | User can log in and is redirected to their game list               | Pass   |
+| Navigation            | Home / Game List Link             | Shows only the logged-in user's games                              | Pass   |
+| Game List Page        | Add Game Button                   | Takes user to the Add Game form                                    | Pass   |
+| Add Game Page         | Add Game Form                     | Valid data creates a new game and redirects to game list           | Pass   |
+| Game Detail Page      | Add Note Form                     | Saves a new note for that specific game                            | Pass   |
+| Game Detail Page      | Edit Note Button                  | Loads note text into the form and allows updating                  | Pass   |
+| Game Detail Page      | Delete Note Button                | Opens confirmation modal; deletes note on confirmation             | Pass   |
+| Game Detail Page      | Notes Visibility                  | Only the logged-in user can see their own notes                    | Pass   |
+| Game Detail Page      | Note Count                        | Updates automatically after adding/deleting notes                  | Pass   |
+| Authentication        | Restricted Pages Redirect         | Visiting restricted pages redirects user to login page             | Pass   |
+| Logout                | Logout Button                     | Logs out the user and redirects appropriately                      | Pass   |
+| Responsive Layout     | Mobile Layout                     | Content adjusts cleanly on smaller screens                         | Pass   |
+
+# HTML Validation
+Add game
+![Add game Page](static/images/htmlValidation/AddGameHtml.png)
+
+GameList
+![Game List](static/images/htmlValidation/gamelist.png)
+
+Gamepost
+![Game post](static/images/htmlValidation/gamepost.png)
+
+index page
+![Index page](static/images/htmlValidation/index.png)
+
+
 # Technolgies used
 - Python 3.11
 - Django 4.x
@@ -111,6 +144,9 @@ I would like to add a number of additions to the site in the future and these ar
 - Add a functional way where by the player can randomly select from their backlog what to play.
 - Player can search other users and view their backlogs and leave comments.
 - Sync steam achievements and playstation trophies so they can be listed on users profiles.
+- Add mobile responsiveness (left out due to time constraints)
 
 # Known Issues
 [Back to Table of Contents](#table-of-contents)
+
+- Site unfortunately is not responsive for mobiles, as I ran into time constraints.
