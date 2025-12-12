@@ -80,3 +80,11 @@ I used AI to help with debugging issues and errors, it was really helpful for th
 # Future Additions
 [Back to Table of Contents](#table-of-contents)
 
+I would like to add a number of additions to the site in the future and these are:
+- Add a backlog list 
+- Add a playing now list
+- Add a dropped games list
+- Add a functional way where by the player can randomly select from their backlog what to play.
+- Player can search other users and view their backlogs and leave comments.
+- Sync steam achievements and playstation trophies so they can be listed on users profiles.
+
