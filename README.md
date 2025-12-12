@@ -123,6 +123,30 @@ Gamepost
 index page
 ![Index page](static/images/htmlValidation/index.png)
 
+Css styles page
+![Css page](static/images/htmlValidation/cssValidation.png)
+
+# Python Validation
+
+forms.py
+
+![Forms](static/images/pythonValidation/forms.png)
+
+models.py (2 of them)
+
+![Forms](static/images/pythonValidation/models1.png)
+![Forms](static/images/pythonValidation/models2.png)
+
+urls.py (2 of them)
+
+![Urls](static/images/pythonValidation/urls.png)
+![Urls](static/images/pythonValidation/urls2.png)
+
+views.py
+
+![Views](static/images/pythonValidation/views1.png)
+
+
 
 # Technolgies used
 - Python 3.11
