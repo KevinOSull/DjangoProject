@@ -6,7 +6,6 @@
 - [UX Design](#ux-design)
 - [User Stories](#user-stories)
 - [Wireframes](#wireframes)
-- [Brand Identity](#brand-identity)
 - [Deployment](#deployment)
 - [AI Usage Disclosure](#ai-usage-disclosure)
 - [Testing](#testing)
@@ -71,6 +70,7 @@ Access Locally:
 Open your browser and go to http://127.0.0.1:8000/
 # AI Usage Disclosure
 [Back to Table of Contents](#table-of-contents)
+
 I used AI to help with debugging issues and errors, it was really helpful for this. I used it to help me break down problems further so I could write the code easier. It helped me with Django best practices and gave me ideas on how to make the user experience better for people using the site. It also helped with trying to understand complex error messages and point out what they meant and how to solve them. 
 
 
