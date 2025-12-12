@@ -173,6 +173,7 @@ I would like to add a number of additions to the site in the future and these ar
 - Player can search other users and view their backlogs and leave comments.
 - Sync steam achievements and playstation trophies so they can be listed on users profiles.
 - Add mobile responsiveness (left out due to time constraints)
+- Ability to filter games by a catagory.
 
 # Known Issues
 [Back to Table of Contents](#table-of-contents)
