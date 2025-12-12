@@ -24,6 +24,16 @@
 # Wireframes
 Login in screen
 ![Sign in screen wireframe](static/images/wireframeImages/Signinscreenshot.png)
+Sign up screen
+![Sign up screen wireframe](static/images/wireframeImages/Signupscreenshot.png)
+About me screen
+![About me screen wireframe](static/images/wireframeImages/aboutmescreenshot.png)
+Add a game
+![Add a game](static/images/wireframeImages/Addagamescreenshot.png)
+Game List
+![Game List](static/images/wireframeImages/addnewgamesscreenshot.png)
+Game Info
+![Game info screen](static/images/wireframeImages/gameinfoscreenshot.png)
 [Back to Table of Contents](#table-of-contents)
 # Deployment
 [Back to Table of Contents](#table-of-contents)
