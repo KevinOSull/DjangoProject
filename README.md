@@ -12,6 +12,7 @@
 - [Future Additions](#future-additions)
 - [Known Issues](#known-issues)
 - [Credits](#credits)
+- [Acknowledgements](#acknowledements)
 
 
 # Overview
@@ -178,5 +179,11 @@ I would like to add a number of additions to the site in the future and these ar
 
 - Site unfortunately is not responsive for mobiles, as I ran into time constraints.
 
-# Credit
+# Acknowledgements
+
 [Back to Table of Contents](#table-of-contents)
+
+- Code Institute - For the Full Stack Developer curriculum and the opportunity to build this capstone project.
+- GitHub Copilot and Chat GPT - Helped me debug code and understand errors as they arose. 
+- Dillon Mc Caffrey - I want to thank Dillon for his guidance and feedback throughout the bootcamp and this project.
+- Code Institute Staff and Students - I want to thank code institute staff for all their help and to my class mates for always willing to   lend a hand if needed and their support throughout the duration of the bootcamp.
