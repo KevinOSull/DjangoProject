@@ -22,7 +22,11 @@ Please find a link to the live project about this line. This project is called g
 of what games they have in their backlog and what there playing and might want to play next. They can leave notes about the game there playing to remind them of stuff that they can go back and read about.
 
 # UX Design
+
 [Back to Table of Contents](#table-of-contents)
+
+For the ux design I decided to keep it very simple. At the top of the page there is a nav bar with page options and they are 
+Home About Register and Login, by clicking them you can navigate the different pages. When you first login in it will allow you to add a game, you can then click on the game and it will show you the game info. Also on this page you can leave a note about the game you're playing, e.g a part you found really cool or disliked or anything you want really. You can also delete and edit the comment. when you login it will bring you back to the login page and if you don't have an account you can sign up. When you sign in, it will tell you, you signed in as.... or if you delete a note it will ask you to confirm if you want to delete it. You will see small messages like this whenever an action is performed and its to give the user visual feedback of what they just did.
 
 # User Stories
 [Back to Table of Contents](#table-of-contents)
