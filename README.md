@@ -77,6 +77,16 @@ I used AI to help with debugging issues and errors, it was really helpful for th
 # Testing
 [Back to Table of Contents](#table-of-contents)
 
+# Technolgies used
+- Python 3.11
+- Django 4.x
+- Bootstrap 5
+- SQLite / PostgreSQL
+- Heroku (for deployment)
+[Back to Table of Contents](#table-of-contents)
+
+
+
 # Future Additions
 [Back to Table of Contents](#table-of-contents)
 
