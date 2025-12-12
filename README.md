@@ -17,6 +17,8 @@
 [Back to Table of Contents](#table-of-contents)
 
 [Visit the live site](https://keeptrackofyourgames-06c87bb2898e.herokuapp.com/accounts/login/)
+Please find a link to the live project about this line. This project is called gametracker, its purpose is help gamers keep track
+of what games they have in their backlog and what there playing and might want to play next. They can leave notes about the game there playing to remind them of stuff that they can go back and read about.
 
 # UX Design
 [Back to Table of Contents](#table-of-contents)
