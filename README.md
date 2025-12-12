@@ -46,6 +46,29 @@ Game Info
 [Back to Table of Contents](#table-of-contents)
 # Deployment
 [Back to Table of Contents](#table-of-contents)
+
+The site is hosted on heroku and uses a PostgresSQL database, you can access the site through the live link at the top of the page or
+follow these instructions if you want to run it locally on your machine.
+
+Clone the repository:
+git clone <your-repo-url>
+cd gametracker
+
+Create and activate a virtual environment:
+python -m venv venv
+source venv/bin/activate
+
+Install dependencies: install dependancies from the requirements.txt
+pip install -r requirements.txt
+
+Apply Migrations
+python manage.py migrate
+
+Run the development server:
+python manage.py runserver
+
+Access Locally:
+Open your browser and go to http://127.0.0.1:8000/
 # AI Usage Disclosure
 [Back to Table of Contents](#table-of-contents)
 
