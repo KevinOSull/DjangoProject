@@ -15,6 +15,7 @@
 
 # Overview
 [Back to Table of Contents](#table-of-contents)
+
 [Visit the live site](https://keeptrackofyourgames-06c87bb2898e.herokuapp.com/accounts/login/)
 
 # UX Design
