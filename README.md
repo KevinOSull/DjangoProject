@@ -13,19 +13,19 @@
 - [Future Additions](#future-additions)
 
 
-### Overview
+# Overview
 
-### UX Design
+# UX Design
 
-### User Stories
+# User Stories
 
-### Wireframes
+# Wireframes
 
-### Deployment
+# Deployment
 
-### AI Usage Disclosure
+# AI Usage Disclosure
 
-### Testing
+# Testing
 
-### Future Additions
+# Future Additions
 
