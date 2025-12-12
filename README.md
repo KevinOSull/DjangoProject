@@ -10,6 +10,7 @@
 - [AI Usage Disclosure](#ai-usage-disclosure)
 - [Testing](#testing)
 - [Future Additions](#future-additions)
+- [Known Issues](#known-issues)
 
 
 # Overview
@@ -27,8 +28,21 @@ of what games they have in their backlog and what there playing and might want t
 For the ux design I decided to keep it very simple. At the top of the page there is a nav bar with page options and they are 
 Home About Register and Login, by clicking them you can navigate the different pages. When you first login in it will allow you to add a game, you can then click on the game and it will show you the game info. Also on this page you can leave a note about the game you're playing, e.g a part you found really cool or disliked or anything you want really. You can also delete and edit the comment. when you login it will bring you back to the login page and if you don't have an account you can sign up. When you sign in, it will tell you, you signed in as.... or if you delete a note it will ask you to confirm if you want to delete it. You will see small messages like this whenever an action is performed and its to give the user visual feedback of what they just did.
 
-# User Stories
+# User Stories for GameTracker
+
 [Back to Table of Contents](#table-of-contents)
+
+- As a new user, I want to create an account so that I can securely access my game collection.
+- As a user, I want to view a list of all my games so that I can quickly find what I’m currently playing or plan to play.
+- As a user, I want to click into a game to view its details so that I can see all my notes for that game.
+- As a user, I want to add notes to a game so that I can remember what I was doing or what I need to do next.
+- As a user, I want to edit my notes so that I can update my thoughts without creating duplicates.
+- As a user, I want to delete my notes so that I can keep my game page clean.
+- As a user, I want to see how many notes I’ve made on a game so that I can quickly understand how much info I’ve stored.
+- As a user, I want a simple and clean interface so that I can navigate the app easily.
+- As a user, I want confirmation modals when deleting notes so that I don’t accidentally lose important information.
+
+
 # Wireframes
 Login in screen
 ![Sign in screen wireframe](static/images/wireframeImages/Signinscreenshot.png)
@@ -98,3 +112,5 @@ I would like to add a number of additions to the site in the future and these ar
 - Player can search other users and view their backlogs and leave comments.
 - Sync steam achievements and playstation trophies so they can be listed on users profiles.
 
+# Known Issues
+[Back to Table of Contents](#table-of-contents)
